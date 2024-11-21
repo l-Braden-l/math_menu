@@ -31,12 +31,13 @@ def main():
     while True:
        display_menu()
        choice = float(input('Enter your menu choice (1-4 only):\n'))
+
        if choice == 1:
           radius = float(input('Enter the radius of the circle (in ft.): '))
           area = calculate_circle_area(radius)
           print(f'The area of the circle is {area:.2f} sq. ft.')
        elif choice == 2:
-            base = int(input('Enter the base number: '))
+            base = float(input('Enter the base number: '))
             exponent = int(input('Enter the exponent: '))
             result = calculate_power(base,exponent)
             print(f'{base} raised to the power of {exponent} is: {result}')
@@ -44,7 +45,7 @@ def main():
             base = int(input('Enter the base number: '))
             height = int(input('Enter the height number: '))
             area = calculate_triangle_area(base,height)
-            print(f'The area of the right triangle is: {area} sq. ft.')
+            print(f'The area of the right triangle is: {area:.2f} sq. ft.')
        elif choice ==4:
             print('exiting the script...')
             time.sleep(2)
